@@ -36,35 +36,43 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col h-screen p-4">
-      <div className="fixed top-0 left-0 w-full h-full" style={{
-            backgroundImage: `url(https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80c521f5ae.jpg)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: '100%',
-        }}></div>
-      <div className="absolute top-4 left-4 z-10 flex flex-col items-start">
+    <main className="flex flex-col h-screen p-4" style={{
+
+
+        backgroundImage: `url(https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80c521f5ae.jpg)`,
+        backgroundSize: "cover",
+        backgroundPosition: 'center',
+        width: '100%',
+      }}
+    >
+      <div className="flex justify-start mt-8 w-full flex-col items-start">
         <Image
           src="/logo.png"
           alt="江苏省中医院泌尿外科"
-          style={{ objectFit: "contain" }}
+          width={535}
+          height={43}
+          style={{ objectFit: 'contain' }}
           className="mb-4"
         />
-        <h2 className="text-sm font-semibold text-foreground">江苏省中医院泌尿外科欢迎您</h2>
+        <h2 className="text-sm font-semibold text-foreground">
+          江苏省中医院泌尿外科欢迎您
+        </h2>
       </div>
-      <div className="flex-grow flex justify-center items-center w-full">
-        <div className="sm:max-w-md w-full">
+       <div className="flex-grow flex justify-center items-center w-full">
+        <div className="sm:max-w-md w-full ">
           <div className="p-6 rounded-lg shadow-md" style={{ backgroundColor: 'transparent' }}>
+             
+
             <div className="mb-4">
-              <Input
-                type="text"
-                placeholder="用户名"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-            <div className="mb-6">
-              <Input
+                <Input
+                  type="text"
+                  placeholder="用户名"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+              <div className="mb-6">
+                <Input
                   type="password"
                   placeholder="密码"
                   value={password}
@@ -75,11 +83,11 @@ export default function Home() {
                 {isLoggingIn ? '登录中...' : '登录'}
               </Button>
               {loginError && <p className="text-red-500 mt-4 text-center">{loginError}</p>}
-            <div className="mt-6 text-center">
-              <Button variant="secondary" onClick={handleMobileLogin} disabled={isLoggingIn}>
-                <Phone className="mr-2 h-4 w-4" />
-                手机号快捷登录
-              </Button>
+              <div className="mt-6 text-center">
+                <Button variant="secondary" onClick={handleMobileLogin} disabled={isLoggingIn}>
+                  <Phone className="mr-2 h-4 w-4" />
+                  手机号快捷登录
+                </Button>
             </div>
           </div>
         </div>
