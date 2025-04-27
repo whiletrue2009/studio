@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   const [isLoggingIn, setIsLoggingIn] = useState(false);
@@ -44,20 +45,20 @@ export default function Home() {
         width: '100%',
       }}
     >
-      <div className="flex justify-start mt-8 w-full">
+      <div className="flex justify-start mt-8 w-full items-center">
         <Image
           src="https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80f7d8214e.png"
           alt="江苏省中医院泌尿外科 Logo"
           width={200}
           height={80}
           style={{ objectFit: 'contain' }}
+          className="mr-4"
         />
+        <h1 className="text-2xl font-semibold text-foreground">
+           江苏省中医院泌尿外科欢迎您
+        </h1>
       </div>
       <div className="sm:max-w-md w-full mt-8">
-        <h1 className="text-2xl font-semibold text-center text-foreground mb-4">
-          江苏省中医院泌尿外科欢迎您
-        </h1>
-
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4 text-center">用户登录</h2>
           <div className="mb-4">
