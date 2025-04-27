@@ -36,59 +36,62 @@ export default function Home() {
   };
 
   return (
-    <div
-      className="flex flex-col items-center justify-start min-h-screen p-4"
-      style={{
+    <main className="flex flex-col h-screen p-4" style={{
+
+
         backgroundImage: `url(https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80c521f5ae.jpg)`,
-        backgroundSize: 'cover',
+        backgroundSize: "cover",
         backgroundPosition: 'center',
         width: '100%',
       }}
     >
       <div className="flex justify-start mt-8 w-full flex-col items-start">
         <Image
-          src="https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80f7d8214e.png"
-          alt="江苏省中医院泌尿外科 Logo"
+          src="/logo.png"
+          alt="江苏省中医院泌尿外科"
           width={200}
           height={80}
           style={{ objectFit: 'contain' }}
           className="mb-4"
         />
-        <h1 className="text-2xl font-semibold text-foreground">
-           江苏省中医院泌尿外科欢迎您
-        </h1>
+        <h2 className="text-sm font-semibold text-foreground">
+          江苏省中医院泌尿外科欢迎您
+        </h2>
       </div>
-      <div className="sm:max-w-md w-full mt-8">
-        <div className="p-6 rounded-lg shadow-md" style={{ backgroundColor: 'transparent' }}>
-          <h2 className="text-xl font-semibold mb-4 text-center text-foreground">用户登录</h2>
-          <div className="mb-4">
-            <Input
-              type="text"
-              placeholder="用户名"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="mb-6">
-            <Input
-              type="password"
-              placeholder="密码"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <Button className="w-full" onClick={handleLogin} disabled={isLoggingIn}>
-            {isLoggingIn ? '登录中...' : '登录'}
-          </Button>
-          {loginError && <p className="text-red-500 mt-4 text-center">{loginError}</p>}
-          <div className="mt-6 text-center">
-            <Button variant="secondary" onClick={handleMobileLogin} disabled={isLoggingIn}>
-              <Phone className="mr-2 h-4 w-4" />
-              手机号快捷登录
-            </Button>
+       <div className="flex-grow flex justify-center items-center w-full">
+        <div className="sm:max-w-md w-full ">
+          <div className="p-6 rounded-lg shadow-md" style={{ backgroundColor: 'transparent' }}>
+             
+
+            <div className="mb-4">
+                <Input
+                  type="text"
+                  placeholder="用户名"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+              <div className="mb-6">
+                <Input
+                  type="password"
+                  placeholder="密码"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <Button className="w-full" onClick={handleLogin} disabled={isLoggingIn}>
+                {isLoggingIn ? '登录中...' : '登录'}
+              </Button>
+              {loginError && <p className="text-red-500 mt-4 text-center">{loginError}</p>}
+              <div className="mt-6 text-center">
+                <Button variant="secondary" onClick={handleMobileLogin} disabled={isLoggingIn}>
+                  <Phone className="mr-2 h-4 w-4" />
+                  手机号快捷登录
+                </Button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
