@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import { Phone } from 'lucide-react';
 
@@ -43,7 +42,7 @@ export default function Home() {
       </div>
       <div className="sm:max-w-md w-full mt-8">
         <h1 className="text-2xl font-semibold text-center text-foreground mb-4">
-          江苏省中医院泌尿外科登录
+          江苏省中医院泌尿外科欢迎您
         </h1>
         <form className="flex flex-col gap-4">
           <Input type="text" placeholder="用户名" className="shadow-sm" />
