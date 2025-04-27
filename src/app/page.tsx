@@ -1,8 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import { Phone } from 'lucide-react';
 
@@ -44,28 +42,6 @@ export default function Home() {
         <h1 className="text-2xl font-semibold text-center text-foreground mb-4">
           江苏省中医院泌尿外科欢迎您
         </h1>
-        <form className="flex flex-col gap-4">
-          <Input type="text" placeholder="用户名" className="shadow-sm" />
-          <Input type="password" placeholder="密码" className="shadow-sm" />
-          <Button
-            onClick={handleLogin}
-            disabled={isLoggingIn}
-            className="bg-primary text-primary-foreground hover:bg-primary/80 shadow-md"
-          >
-            {isLoggingIn ? '登录中...' : '登录'}
-          </Button>
-        </form>
-
-        <div className="mt-4 text-center">
-          <Button variant="secondary" className="shadow-sm" onClick={handleLogin}>
-            <Phone className="mr-2 h-4 w-4" />
-            手机号快捷登录
-          </Button>
-        </div>
-
-        {loginError && (
-          <div className="mt-4 text-center text-red-500">{loginError}</div>
-        )}
       </div>
     </div>
   );
