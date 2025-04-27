@@ -23,17 +23,25 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
-      <div className="sm:max-w-md w-full">
-        <div className="flex justify-center mb-8">
-          <Image
-            src="https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80f7d8214e.png"
-            alt="江苏省中医院泌尿外科 Logo"
-            width={150}
-            height={150}
-            className="rounded-full shadow-md"
-          />
-        </div>
+    <div
+      className="flex flex-col items-center justify-start min-h-screen p-4"
+      style={{
+        backgroundImage: `url(https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80c521f5ae.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+      }}
+    >
+      <div className="flex justify-center mt-8">
+        <Image
+          src="https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80f7d8214e.png"
+          alt="江苏省中医院泌尿外科 Logo"
+          width={200}
+          height={80}
+          style={{ objectFit: 'contain' }}
+        />
+      </div>
+      <div className="sm:max-w-md w-full mt-8">
         <h1 className="text-2xl font-semibold text-center text-foreground mb-4">
           江苏省中医院泌尿外科登录
         </h1>
@@ -63,4 +71,3 @@ export default function Home() {
     </div>
   );
 }
-
