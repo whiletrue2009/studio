@@ -32,7 +32,7 @@ export default function Home() {
         width: '100%',
       }}
     >
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-start mt-8 w-full">
         <Image
           src="https://www.jshtcm.com/Uploads/Picture/2024/09/04/s66d80f7d8214e.png"
           alt="江苏省中医院泌尿外科 Logo"
